@@ -1,2 +1,2 @@
-- css 预编译器使用 less
+- css 预编译器使用 scss
 - dayjs 时间处理插件

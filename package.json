@@ -6,7 +6,7 @@
   "templateInfo": {
     "name": "vuex",
     "typescript": false,
-    "css": "less"
+    "css": "sass"
   },
   "scripts": {
     "build:weapp": "taro build --type weapp",
@@ -36,7 +36,6 @@
   "dependencies": {
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "3.0.22",
-    "@tarojs/plugin-less": "^2.2.10",
     "@tarojs/runtime": "3.0.22",
     "@tarojs/taro": "3.0.22",
     "dayjs": "^1.10.2",

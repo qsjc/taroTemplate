@@ -12,16 +12,16 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [
-    '@tarojs/plugin-less'
+
   ],
   defineConstants: {
   },
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
   },
-  less: {
+  sass: {
     resource: [
-      path.resolve(__dirname, '..', 'src/assets/css/variable.less')
+      path.resolve(__dirname, '..', 'src/assets/css/variable.scss')
     ]
   },
   copy: {

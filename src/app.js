@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import store from './store'
 import Taro from '@tarojs/taro'
-import './app.less'
+import './app.scss'
 
 // Vue.config.productionTip = false
 

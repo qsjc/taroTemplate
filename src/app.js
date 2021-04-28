@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import store from './store'
 import Taro from '@tarojs/taro'
-import './app.scss'
 import './assets/css/reset.scss'
+import './app.scss'
 
 // Vue.config.productionTip = false
 

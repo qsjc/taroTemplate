@@ -3,6 +3,7 @@ module.exports = {
     NODE_ENV: '"development"'
   },
   defineConstants: {
+    baseApi: '/dev'
   },
   mini: {},
   h5: {}

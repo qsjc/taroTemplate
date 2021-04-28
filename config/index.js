@@ -10,14 +10,19 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: [
-
+    // '@tarojs/plugin-sass', // 使用 Sass
+    // '@tarojs/plugin-less', // 使用 Less
+    // '@tarojs/plugin-stylus', // 使用 Stylus
   ],
   defineConstants: {
   },
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/store': path.resolve(__dirname, '..', 'src/store'),
+    '@/assets': path.resolve(__dirname, '..', 'src/assets'),
   },
   sass: {
     resource: [

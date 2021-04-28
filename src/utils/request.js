@@ -1,15 +1,17 @@
 import Taro from '@tarojs/taro'
-// import { code } from './config'
 // import store from '@/store'
+import { baseApi, code } from './config'
+
 export const request = {
-  get(url, data = {}) {
+  get(url, data = {}, config ={}) {
     return new Promise((resolve, reject) => {
       Taro.request({
-        url: 'baseUrl' + url,
-        method: 'get',
+        url: baseApi + url,
+        method: 'GET',
         header: {
 
         },
+        ...config,
         data
       }).then(res => {
         resolve(res.data)
@@ -22,11 +24,12 @@ export const request = {
   post(url, data = {}, config = {}) {
     return new Promise((resolve, reject) => {
       Taro.request({
-        url: 'baseUrl' + url,
-        method: 'post',
+        url: baseApi + url,
+        method: 'POST',
         header: {
 
         },
+        ...config,
         data
       }).then(res => {
         resolve(res.data)

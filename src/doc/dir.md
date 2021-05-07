@@ -12,7 +12,7 @@
  - utils
     - config 全局变量
     - format 工具函数
-    - reqest 请求封装
+    - request 请求封装
     - validate 正则函数
   - app.scss 全局样式 class等
   - pages

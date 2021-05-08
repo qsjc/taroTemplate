@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import store from './store'
 import Taro from '@tarojs/taro'
 import './assets/css/reset.scss'
@@ -17,7 +16,7 @@ Taro.pxTransform({
   minPixelValue: 0
 })
 
-const App = new Vue({
+const App = {
   store,
   onLaunch () {
     const updateManager = Taro.getUpdateManager()
@@ -47,6 +46,6 @@ const App = new Vue({
     // this.$slots.default 是将要会渲染的页面
     return h('block', this.$slots.default)
   }
-})
+}
 
 export default App

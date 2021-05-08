@@ -10,6 +10,12 @@ export default {
         iconPath: '',
         selectedIconPath: ''
       },
+      {
+        pagePath: 'pages/index/index',
+        text: '我的',
+        iconPath: '',
+        selectedIconPath: ''
+      }
     ]
   },
   subPackages: [

@@ -45,8 +45,10 @@
   border-right: 1px solid var(--border-color);
 }
 
-@mixin border-radius($color: var(--border-color), $num: 0px) {
-  border: 1px solid $color;
-  border-radius: $num;
+.ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
+
 

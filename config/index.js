@@ -26,8 +26,9 @@ const config = {
   },
   sass: {
     resource: [
-      path.resolve(__dirname, '..', 'src/assets/css/variable.scss')
-    ]
+      'src/assets/css/variable.scss'
+    ],
+    projectDirectory: path.resolve(__dirname, '..')
   },
   copy: {
     patterns: [

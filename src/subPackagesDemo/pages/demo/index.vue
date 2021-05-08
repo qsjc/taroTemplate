@@ -28,13 +28,13 @@ export default {
   // onShareAppMessage (Object) {
   //
   // },
-  methods: {
-
-  },
   mounted () {
 
   },
   beforeDestroy () {
+
+  },
+  methods: {
 
   },
   onHide () {

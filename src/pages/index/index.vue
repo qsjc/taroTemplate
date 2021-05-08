@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'Index',
+  name: 'index',
   components: {
 
   }
@@ -15,7 +15,9 @@ export default {
 
 <style lang="scss">
 .index {
-  color: var(--color);
+  color: $color;
   margin-top: 60px;
+  text-align: center;
+  @include border-radius();
 }
 </style>

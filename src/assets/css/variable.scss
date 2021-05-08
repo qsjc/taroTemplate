@@ -1,5 +1,19 @@
-:root{
-  // 颜色 字体 圆角
-  --color: #ccc;
-  --border-color: #ccc
+$color: red;
+$border-color: #ccc;
+
+
+
+
+
+
+@mixin border-radius($color: $border-color, $num: 0px) {
+  border: 1px solid $color;
+  border-radius: $num;
+}
+
+@mixin multi-ellipsis($lines: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines;
 }

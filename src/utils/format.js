@@ -6,3 +6,7 @@ dayjs.extend(isSameOrBefore)
 dayjs.extend(isSameOrAfter)
 
 // NOTE 以上日期处理依赖
+
+export function formatYMD (time) {
+  return dayjs(time).format('YYYY-MM-DD')
+}

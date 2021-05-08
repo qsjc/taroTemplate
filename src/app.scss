@@ -25,7 +25,8 @@
 
 .space-between{
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .border-top-1px{
@@ -44,7 +45,7 @@
   border-right: 1px solid var(--border-color);
 }
 
-@mixin border-radius($num: 0, $color: var(--border-color)) {
+@mixin border-radius($color: var(--border-color), $num: 0px) {
   border: 1px solid $color;
   border-radius: $num;
 }

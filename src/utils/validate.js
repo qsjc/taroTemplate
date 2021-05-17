@@ -1,7 +1,7 @@
 // 正则
 const env = process.env.TARO_ENV
 export const isWeapp = env === 'weapp'
-export const isAliapp = env === 'alipay'
+export const isAlipay = env === 'alipay'
 
 export const validateTel = (tel) => {
   const reg = /^1[0-9]{10}/
@@ -36,4 +36,9 @@ export const validateNoChineseAndEnglish = (str) => {
 export const valdiateHttpUrl = (url) => {
   const reg = /^http/
   return reg.test(url)
+}
+
+export const validateIdCard = (idCardNo) => {
+  const reg = /^(\d{15}$)|(^\d{18}$)|^\d{17}(\d|X|x)$/
+  return reg.test(idCardNo)
 }

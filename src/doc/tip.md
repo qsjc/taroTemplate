@@ -1,1 +1,2 @@
  - 无法使用:root来定义颜色值
+ - scss的`mixin`放在`variable.scss`中

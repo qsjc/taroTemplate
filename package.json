@@ -39,6 +39,7 @@
 		"@tarojs/runtime": "3.2.8",
 		"@tarojs/taro": "3.2.8",
 		"dayjs": "^1.10.2",
+		"md5": "^2.3.0",
 		"stylelint-config-standard": "^22.0.0",
 		"vue": "^2.5.0",
 		"vue-template-compiler": "^2.5.0",

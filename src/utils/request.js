@@ -1,4 +1,5 @@
 import Taro from '@tarojs/taro'
+import { baseApi, appKey, appSecret, token } from './config'
 import md5 from 'md5'
 
 // 生成一个十位随机数
@@ -40,13 +41,13 @@ export const request = {
         url: baseApi + url,
         method: 'POST',
         header: {
-          appkey: appKey,
+          appkey: `${appKey}`,
           timestamp: `${nowTime}`,
           token: queryToken,
           v: createRandom(),
           shands: '2.0',
-          Authorization: Taro.getStorageSync('token')
-            ? `Bearer ${Taro.getStorageSync('token')}`
+          Authorization: token
+            ? `Bearer ${token}`
             : ''
         },
         ...config,

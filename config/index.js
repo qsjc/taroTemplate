@@ -23,6 +23,7 @@ const config = {
     '@/utils': path.resolve(__dirname, '..', 'src/utils'),
     '@/store': path.resolve(__dirname, '..', 'src/store'),
     '@/assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@/api': path.resolve(__dirname, '..', 'src/api')
   },
   sass: {
     resource: [

@@ -55,7 +55,7 @@ export const request = {
         success(res) {
           const errorCode = [991, 992, 993, 995]
           const resCode = res.code
-          if (errorCode.findIndex(resCode) > -1) {
+          if (errorCode.findIndex(code => resCode === code) > -1) {
             // NOTE 类似token失效等操作逻辑
             // TODO dosomething
             return false

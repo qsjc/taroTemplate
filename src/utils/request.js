@@ -1,5 +1,4 @@
 import Taro from '@tarojs/taro'
-import { baseApi, appKey, appSecret } from './config'
 import md5 from 'md5'
 
 // 生成一个十位随机数

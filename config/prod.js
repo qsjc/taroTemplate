@@ -3,15 +3,15 @@ module.exports = {
     NODE_ENV: '"production"'
   },
   defineConstants: {
-    envBaseApi: '/pro',
-    envGwUrl: 'https://m.kaiyuanhotels.com',
-    envPmUrl: 'https://m.kaiyuanhotels.com/mall',
-    envAppkey: '200001',
-    envAppSecret: 'oel7ipwztv9388litv9f5d1sazdmdc',
-    envTdEnv: 1,
-    envTdPartner: 'kaiyuanhotels',
-    envTdAppName: 'kaiyuan_web',
-    envTdToken: 'kaiyuanhotels'
+    baseApi: '/pro',
+    gwUrl: 'https://m.kaiyuanhotels.com',
+    pmUrl: 'https://m.kaiyuanhotels.com/mall',
+    appKey: '200001',
+    appSecret: 'oel7ipwztv9388litv9f5d1sazdmdc',
+    tdEnv: 1,
+    tdPartner: 'kaiyuanhotels',
+    tdAppName: 'kaiyuan_web',
+    tdToken: 'kaiyuanhotels'
   },
   mini: {},
   h5: {

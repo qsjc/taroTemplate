@@ -15,7 +15,6 @@ export default {
 
 <style lang="scss">
 .index {
-  color: $color;
   margin-top: 60px;
   text-align: center;
   @include border-radius();

@@ -1,12 +1,14 @@
-$color: red;
-$border-color: #ccc;
+$brand-color: #ffbd27;
+$notice-color: #eb473a;
+$divide-color:#e8e8e8;
+$bg-color: #f4f4f4;
 
 
 
 
 
 
-@mixin border-radius($color: $border-color, $num: 0px) {
+@mixin border-radius($color: $divide-color, $num: 0px) {
   border: 1px solid $color;
   border-radius: $num;
 }

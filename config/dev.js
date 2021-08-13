@@ -4,8 +4,6 @@ module.exports = {
   },
   defineConstants: {
     envBaseApi: '"/dev"',
-    envBaseApi: '"https://testx-m.kaiyuanhotels.com"',
-    envPmUrl: '"https://testx-m.kaiyuanhotels.com/mall"',
     envAppKey: 400001,
     envAppSecret: '"abcdefg"',
     envTdEnv: 0,

@@ -1,2 +1,4 @@
  - 无法使用:root来定义颜色值
  - scss的`mixin`放在`variable.scss`中
+ - ios新增的safeArea相关的css函数在开发工具上并不生效 但真机有效
+ - [二维码](https://github.com/Pudon/weapp-qrcode-base64) 但根据pr里又增加了颜色以及背景色的功能

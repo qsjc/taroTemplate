@@ -1,4 +1,22 @@
 // 组件样式重置
-view, text, image{
+page {
+  background-color: $bg-color;
+}
+view,
+text,
+image,
+input {
   box-sizing: border-box;
+  color: $title-color;
+}
+input {
+  background-color: transparent;
+}
+.input-placeholder,
+.textarea-placeholder {
+  // 只能设置 font color font-weight
+  color: $disable-placeholder-color;
+}
+image {
+  vertical-align: top;
 }

@@ -2,20 +2,51 @@ $brand-color: #ffbd27;
 $notice-color: #eb473a;
 $divide-color:#e8e8e8;
 $bg-color: #f4f4f4;
+$title-color: #333;
+$content-color: #666;
+$help-color: #999;
+$disable-placeholder-color: #ccc;
+$white-color: #fff;
+$label-color: #595959;
+$label-aux-color: #ec782f;
+$line-color: #dedede;
 
-
-
-
-
-
-@mixin border-radius($color: $divide-color, $num: 0px) {
+@mixin border-radius($color: $divide-color, $num: 0) {
   border: 1px solid $color;
   border-radius: $num;
 }
 
 @mixin multi-ellipsis($lines: 1) {
-  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
   -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  white-space: initial;
+  line-height: 1.25;
+}
+
+@mixin safe-area-inset-top {
+  padding-top: 0;
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+
+@mixin safe-area-inset-bottom {
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@mixin safe-area-inset-bottom-30 {
+  padding-bottom: 30px;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 30px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
+}
+
+// 这个是为了 position: sticky 用的
+@mixin sticky-top {
+  top: 0;
+  top: constant(safe-area-inset-top);
+  top: env(safe-area-inset-top);
 }

@@ -1,6 +1,8 @@
 import Taro from '@tarojs/taro'
-import { baseApi, appKey, appSecret, token } from './config'
+import { baseApi, appKey, appSecret } from './config'
 import md5 from 'md5'
+import { formatLoginRoute } from "@/utils/format"
+import store from "@/store"
 
 // 生成一个十位随机数
 function createRandom() {
@@ -17,10 +19,10 @@ export const request = {
       Taro.request({
         url: baseApi + url,
         method: 'GET',
+        ...config,
         header: {
 
         },
-        ...config,
         data,
         success(res) {
           resolve(res.data)
@@ -40,29 +42,38 @@ export const request = {
       Taro.request({
         url: baseApi + url,
         method: 'POST',
+         ...config,
         header: {
           appkey: `${appKey}`,
           timestamp: `${nowTime}`,
           token: queryToken,
           v: createRandom(),
           shands: '2.0',
-          Authorization: token
-            ? `Bearer ${token}`
-            : ''
+          Authorization: Taro.getStorageSync("token")
+            ? `Bearer ${Taro.getStorageSync("token")}`
+            : ""
         },
-        ...config,
         data,
         success(res) {
           const errorCode = [991, 992, 993, 995]
-          const resCode = res.code
+          const resCode = res.data.code
           if (errorCode.findIndex(code => resCode === code) > -1) {
             // NOTE 类似token失效等操作逻辑
-            // TODO dosomething
-            return false
+            Taro.removeStorageSync("token")
+            if (store.state.common.loginRoute.startsWith("/pages/login/index")) {
+              return false
+            } else {
+              formatLoginRoute()
+              Taro.redirectTo({
+                url: "/pages/login/index"
+              })
+              return false
+            }
           }
           resolve(res.data)
         },
         fail (err) {
+          Taro.hideLoading()
           reject(err)
         }
       })

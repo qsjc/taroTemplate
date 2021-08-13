@@ -1,8 +1,8 @@
 {
-	"name": "myApp",
+	"name": "weapp",
 	"version": "1.0.0",
 	"private": true,
-	"description": "taroWeapp",
+	"description": "小程序",
 	"templateInfo": {
 		"name": "vuex",
 		"typescript": false,
@@ -35,11 +35,12 @@
 	"license": "MIT",
 	"dependencies": {
 		"@babel/runtime": "^7.7.7",
-		"@tarojs/components": "3.2.8",
-		"@tarojs/runtime": "3.2.8",
-		"@tarojs/taro": "3.2.8",
+		"@tarojs/components": "3.2.12",
+		"@tarojs/runtime": "3.2.12",
+		"@tarojs/taro": "3.2.12",
 		"dayjs": "^1.10.2",
 		"md5": "^2.3.0",
+		"mini-html-parser2": "^0.3.0",
 		"stylelint-config-standard": "^22.0.0",
 		"vue": "^2.5.0",
 		"vue-template-compiler": "^2.5.0",
@@ -47,12 +48,12 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
-		"@tarojs/mini-runner": "3.2.8",
-		"@tarojs/webpack-runner": "3.2.8",
+		"@tarojs/mini-runner": "3.2.12",
+		"@tarojs/webpack-runner": "3.2.12",
 		"@types/webpack-env": "^1.13.6",
-		"babel-preset-taro": "3.2.8",
+		"babel-preset-taro": "3.2.12",
 		"eslint": "^7.26.0",
-		"eslint-config-taro": "3.2.8",
+		"eslint-config-taro": "3.2.12",
 		"eslint-plugin-vue": "^7.9.0",
 		"stylelint": "^13.13.1",
 		"vue-loader": "^15.9.2"

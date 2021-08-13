@@ -1,7 +1,7 @@
-import store from './store'
-import Taro from '@tarojs/taro'
-import './assets/css/reset.scss'
-import './app.scss'
+import store from "./store"
+import Taro from "@tarojs/taro"
+import "./assets/css/reset.scss"
+import "./app.scss"
 
 // Vue.config.productionTip = false
 
@@ -9,7 +9,7 @@ import './app.scss'
 Taro.pxTransform({
   onePxTransform: true,
   unitPrecision: 5,
-  propList: ['*'],
+  propList: [ "*" ],
   selectorBlackList: [],
   replace: true,
   mediaQuery: false,
@@ -26,8 +26,9 @@ const App = {
     })
     updateManager.onUpdateReady(function () {
       Taro.showModal({
-        title: '更新提示',
-        content: '新版本已经准备好，是否重启应用？',
+        title: "更新提示",
+        content: "新版本已经准备好，是否重启应用？",
+        showCancel: false,
         success: function (res) {
           if (res.confirm) {
             // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
@@ -44,7 +45,7 @@ const App = {
   },
   render(h) {
     // this.$slots.default 是将要会渲染的页面
-    return h('block', this.$slots.default)
+    return h("block", this.$slots.default)
   }
 }
 

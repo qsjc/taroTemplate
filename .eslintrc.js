@@ -6,7 +6,6 @@ module.exports = {
     "vue/component-definition-name-casing": [ "error", "kebab-case" ],
     "quotes": [ 2, "double" ],
     "object-curly-spacing": [ "error", "always" ],
-    "array-bracket-spacing": [ "error", "always" ],
-    "computed-property-spacing": [ "error", "always" ],
+    "array-bracket-spacing": [ "error", "always" ]
   }
 }

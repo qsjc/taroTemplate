@@ -3,7 +3,6 @@ import dayjs from 'dayjs'
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import QR from "@/assets/js/qrcode"
-import parse from "mini-html-parser2"
 
 dayjs.extend(isSameOrBefore)
 dayjs.extend(isSameOrAfter)
@@ -16,8 +15,8 @@ export function formatYMD (time) {
 export function formatLoginRoute() {
   const pages = Taro.getCurrentPages()
   const currentPage = pages[ pages.length - 1 ] // 获取当前页面的对象
-  const currentRoute = currentPage.route
-  const options = currentPage.options
+  const currentRoute = currentPage.$taroPath.split("?")[0]
+  const options = currentPage.$taroParams
   const optionsList = []
   for (const key in options) {
     if (key !== "$taroTimestamp") {
@@ -78,15 +77,6 @@ export function createQrcodeImg (codeStr) {
     background: "#fff",
     padding: 4
   })
-}
-
-export function formatRichText (html) {
-  parse(html,(err, nodes) => {
-    if (!err) {
-      return nodes
-    }
-  })
-  return html
 }
 
 export function goOtherMiniProgram (appId, path) {

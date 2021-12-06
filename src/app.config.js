@@ -11,14 +11,14 @@ if (process.env.TARO_ENV === "weapp") {
 }
 export default {
   pages: [
-    "pages/index/index",
-    "pages/login/index"
+    "pages/index/index"
   ],
   subPackages: [
     {
       root: "subPackagesDemo",
       pages: [
-        "pages/demo/index"
+        "pages/demo/index",
+        "pages/login/index"
       ]
     },
   ],

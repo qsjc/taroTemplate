@@ -17,6 +17,7 @@ const config = {
     // '@tarojs/plugin-stylus', // 使用 Stylus
   ],
   defineConstants: {
+    // 开发或者生产同时使用的常量
   },
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),

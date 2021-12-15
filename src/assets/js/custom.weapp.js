@@ -1,0 +1,1 @@
+// weapp 的处理逻辑 与  custom.alipay.js 内变量名相同

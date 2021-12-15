@@ -90,3 +90,17 @@ export function goOtherMiniProgram (appId, path) {
     }
   })
 }
+
+// 富文本内点击事件处理
+export function richTextImgTap(e) {
+  console.log(e)
+}
+
+export function richTextLinkTap(e) {
+  if (e.detail.href.startsWith("https://")) {
+    // TODO 跳转内嵌 web
+  }
+  if (e.detail.href.startsWith("/")) {
+    // 跳转小程序页面
+  }
+}
